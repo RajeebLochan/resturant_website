@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{% block content %}
+
+<h1> MENU </h1>
+<div class="column">
+    {% for iteam in menu %}
+    <p>
+        <a href="{%url 'menu_iteam' pk=iteam.pk %}">{{iteam.name}}</a>
+        
+        <span class="menu-price">{{iteam.price}}.00</span>
+    </p>
+    {% endfor %}
+</div>
+{% endblock %}
